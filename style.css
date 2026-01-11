@@ -1,13 +1,16 @@
-/* style.css - 完整修复版 */
+/* style.css - 钛金属质感优化版 */
 
-/* --- 全局变量与重置 --- */
+/* --- 全局变量 --- */
 :root {
-    --primary-color: #000000;       /* 极简黑 */
-    --secondary-color: #666666;     /* 次级灰 */
-    --accent-color: #FF6B00;        /* 活力橙 (呼应 App 强调色) */
-    --bg-light: #F8F9FA;            /* 浅灰背景 */
-    --bg-white: #FFFFFF;            /* 纯白背景 */
-    --section-spacing: 100px;       /* 增加板块间距，呼吸感更强 */
+    /* 调整：将主色调从纯黑改为“深炭黑”，更柔和 */
+    --primary-color: #1c1c1e;
+    --secondary-color: #8e8e93;
+    /* App 品牌色 */
+    --accent-color: #FF6B00;
+    /* 调整：背景色分层 */
+    --bg-white: #FFFFFF;
+    --bg-surface: #F2F2F7; /* iOS 风格的浅灰背景 */
+    --section-spacing: 120px;
 }
 
 * {
@@ -17,34 +20,20 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--primary-color);
-    line-height: 1.6;
+    line-height: 1.5;
     background-color: var(--bg-white);
-    -webkit-font-smoothing: antialiased; /* 让字体在 Mac 上更清晰 */
+    -webkit-font-smoothing: antialiased;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
 
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1080px;
     margin: 0 auto;
-}
-
-.section-padding {
-    padding: var(--section-spacing) 0;
-}
-
-.section-bg {
-    background-color: var(--bg-light);
 }
 
 /* --- 导航栏 --- */
@@ -52,8 +41,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    position: absolute; /* 悬浮在首屏上方 */
+    padding: 24px 5%;
+    position: absolute;
     width: 100%;
     top: 0;
     z-index: 10;
@@ -61,112 +50,126 @@ ul {
 
 .logo {
     font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: -0.03em;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    color: var(--primary-color);
 }
 
 .logo-cn {
     font-weight: 400;
-    opacity: 0.6;
-    margin-left: 4px;
+    opacity: 0.5;
+    margin-left: 6px;
+    font-size: 0.9em;
 }
 
 .lang-btn {
-    background: none;
-    border: 1px solid rgba(0,0,0,0.1);
-    padding: 6px 14px;
+    background: rgba(0,0,0,0.04);
+    border: none;
+    padding: 8px 16px;
     cursor: pointer;
     font-size: 0.85rem;
-    font-weight: 500;
-    border-radius: 20px;
-    transition: all 0.2s ease;
-    color: var(--secondary-color);
+    font-weight: 600;
+    border-radius: 100px;
+    color: var(--primary-color);
+    transition: all 0.2s;
 }
 
 .lang-btn:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    background: rgba(0,0,0,0.08);
 }
 
-/* --- 首屏 (Hero Section) --- */
+/* --- Hero Section --- */
 .hero {
-    height: 90vh; /* 占据视口高度的 90% */
-    min-height: 600px;
+    height: 90vh;
+    min-height: 700px;
     display: flex;
     align-items: center;
     text-align: center;
+    /* 增加一个极其微妙的径向渐变，提升质感 */
+    background: radial-gradient(circle at 50% 50%, #fff 0%, #f9f9f9 100%);
 }
 
 .hero-title {
-    font-size: 4rem; /* 大标题更醒目 */
+    font-size: 4.5rem; /* 更大的标题 */
     font-weight: 800;
     letter-spacing: -0.04em;
     margin-bottom: 24px;
-    line-height: 1.1;
-    background: linear-gradient(180deg, #000000 0%, #333333 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    line-height: 1.05;
+    color: #000;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     color: var(--secondary-color);
-    max-width: 580px;
-    margin: 0 auto 48px auto;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
     font-weight: 400;
+    letter-spacing: -0.01em;
 }
 
 .download-btn {
     display: inline-flex;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: #000; /* 按钮保持纯黑，突出行动点 */
     color: white;
-    padding: 16px 32px;
-    border-radius: 50px;
+    padding: 18px 36px;
+    border-radius: 100px;
     font-weight: 600;
-    font-size: 1rem;
-    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    font-size: 1.05rem;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .download-btn:hover {
     transform: translateY(-2px);
-    background-color: #1a1a1a;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* --- 特性区 (Features) --- */
+/* --- Features Section --- */
+.features {
+    padding: var(--section-spacing) 0;
+}
+
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 60px;
-    text-align: left;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
 }
 
 .feature-icon {
     font-size: 2rem;
-    margin-bottom: 16px;
-    display: inline-block;
-    padding: 12px;
-    background-color: rgba(0,0,0,0.03);
+    margin-bottom: 20px;
+    /* 给图标加个底，显得更精致 */
+    width: 60px;
+    height: 60px;
+    background: #F5F5F7;
     border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .feature-item h3 {
-    font-size: 1.25rem;
-    margin-bottom: 12px;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
     font-weight: 700;
-    letter-spacing: -0.02em;
 }
 
 .feature-item p {
     color: var(--secondary-color);
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-/* --- 截图展示区 (Screenshots) - 重点修复 --- */
+/* --- Screenshots Section (关键修复区域) --- */
+.screenshots {
+    /* 修改：给整个截图区加一个浅灰底 */
+    /* 这样你的 App 截图（即使是灰底）在上面也会显得清晰，因为有了对比 */
+    background-color: #FAFAFA;
+    padding: var(--section-spacing) 0;
+    border-top: 1px solid rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 80px;
@@ -181,39 +184,29 @@ ul {
 .screenshot-gallery {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px; /* 截图之间的间距 */
+    gap: 40px;
     flex-wrap: wrap;
 }
 
-/* 手机壳样式 - 修复版 */
+/* --- 钛金属质感手机壳 --- */
 .phone-frame {
-    /* 1. 调整尺寸适配 */
-    width: 280px;
+    width: 290px;
     height: auto;
-
-    /* 2. 圆角更顺滑 */
-    border-radius: 48px;
-
-    /* 3. 关键修复：纯黑边框，消除塑料感 */
-    border: 10px solid #000000;
-
-    /* 4. 关键修复：增强投影，制造悬浮感 */
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
-
-    /* 5. 内部背景纯黑，防漏光 */
-    background-color: #000000;
+    border-radius: 52px; /* 更圆润的角 */
+    
+    /* 关键改动：不再使用 border，而是用 box-shadow 模拟层次 */
+    /* 1. inset: 屏幕黑边 */
+    /* 2. 0px: 钛金属边框 (深灰色 #4A4A4A) */
+    box-shadow: 
+        inset 0 0 0 3px #1a1a1a, 
+        0 0 0 8px #4A4A4A,
+        0 30px 60px -15px rgba(0, 0, 0, 0.2); /* 更柔和、扩散的投影 */
+        
+    background-color: #1a1a1a;
     overflow: hidden;
     position: relative;
     z-index: 1;
-    
-    /* 增加一个微小的变换，让它看起来更精致 */
-    transition: transform 0.3s ease;
-}
-
-.phone-frame:hover {
-    /* 鼠标悬停时轻微上浮（可选） */
-    transform: translateY(-10px);
+    transform: translateZ(0); /* 开启硬件加速 */
 }
 
 .phone-frame img {
@@ -221,57 +214,34 @@ ul {
     height: auto;
     display: block;
     
-    /* 6. 关键修复：轻微增加对比度，去除截图灰蒙感 */
-    filter: contrast(1.05) saturate(1.02);
+    /* 关键改动：移除所有滤镜！还原真实色彩 */
+    /* 只是稍微加一点亮度，防止看起来脏 */
+    filter: brightness(1.02); 
+    
+    /* 加上这个确保圆角处不会有毛边 */
+    border-radius: 46px; 
 }
 
-/* --- 页脚 (Footer) --- */
+/* --- Footer --- */
 footer {
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
     color: var(--secondary-color);
     font-size: 0.9rem;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    margin-top: 40px;
 }
 
 .footer-link {
-    color: var(--secondary-color);
-    text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.2s;
+    margin-left: 24px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
 }
 
 .footer-link:hover {
-    color: var(--primary-color);
+    border-color: var(--secondary-color);
 }
 
-/* --- 移动端适配 (Media Queries) --- */
+/* --- Mobile --- */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem; /* 手机上标题调小 */
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-        padding: 0 20px;
-    }
-    
-    .feature-grid {
-        gap: 40px;
-        text-align: center; /* 手机上特性居中对齐 */
-    }
-    
-    .feature-icon {
-        margin-bottom: 12px;
-    }
-    
-    .phone-frame {
-        width: 260px; /* 手机上截图略微缩小 */
-        margin-bottom: 20px;
-    }
-    
-    .screenshot-gallery {
-        gap: 30px;
-    }
+    .hero-title { font-size: 2.8rem; }
+    .phone-frame { width: 260px; margin-bottom: 30px; }
 }

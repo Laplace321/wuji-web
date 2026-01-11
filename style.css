@@ -1,0 +1,205 @@
+/* 全局设置 */
+:root {
+    --primary-color: #000000; /* 极简黑 */
+    --secondary-color: #666666; /* 次级灰 */
+    --accent-color: #FF6B00; /* 提亮的橙色，呼应你的App主题 */
+    --bg-light: #F8F9FA;
+    --bg-white: #FFFFFF;
+    --section-spacing: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--primary-color);
+    line-height: 1.6;
+    background-color: var(--bg-white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: var(--section-spacing) 0;
+}
+
+.section-bg {
+    background-color: var(--bg-light);
+}
+
+/* 导航栏 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.logo-cn {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.lang-btn {
+    background: none;
+    border: 1px solid var(--primary-color);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+/* 首屏 Hero Section */
+.hero {
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    background-color: #e65c00;
+    box-shadow: 0 10px 20px -10px rgba(255, 107, 0, 0.5);
+}
+
+/* 特性 Section */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    text-align: left;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: var(--secondary-color);
+}
+
+/* 截图 Section */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.screenshot-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* 手机壳效果 */
+.phone-frame {
+    width: 300px;
+    height: auto;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border: 8px solid #1a1a1a; /* 模拟黑色手机边框 */
+    background-color: #fff;
+}
+
+.phone-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 页脚 */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.footer-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 20px;
+    border-bottom: 1px dotted var(--secondary-color);
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .feature-grid {
+        text-align: center;
+    }
+    .phone-frame {
+        width: 260px; /* 手机端稍微缩小截图 */
+        margin-bottom: 20px;
+    }
+}

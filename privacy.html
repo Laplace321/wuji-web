@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WuJi - Privacy Policy & Terms of Service</title>
+    <title>WuJi - Privacy Policy & Terms</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         .content-body { line-height: 1.8; color: #333; max-width: 850px; margin: 100px auto 50px; padding: 20px; }
-        h1 { border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; color: #000; font-size: 2.2rem; }
-        h2 { margin-top: 40px; color: #1a1a1a; border-left: 4px solid #000; padding-left: 15px; font-size: 1.5rem; }
-        h3 { margin-top: 25px; color: #444; }
-        p { margin: 15px 0; color: #666; }
+        h1 { border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; color: #000; font-size: 2.2rem; margin-bottom: 30px; }
+        h2 { margin-top: 45px; color: #1a1a1a; border-left: 4px solid #000; padding-left: 15px; font-size: 1.6rem; background: #f9f9f9; padding: 10px 15px; }
+        h3 { margin-top: 30px; color: #444; font-size: 1.2rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        p, li { margin: 12px 0; color: #555; }
+        ul { padding-left: 20px; }
         strong { color: #000; }
-        .section { margin-bottom: 50px; }
+        .update-date { color: #888; font-style: italic; }
+        .navbar .logo-cn { font-size: 0.8em; color: #666; margin-left: 5px; }
     </style>
 </head>
 <body>
@@ -28,61 +30,72 @@
 
     <div class="content-body">
         <div class="lang-en">
-            <h1>Privacy Policy & Terms</h1>
-            <p>Last updated: January 12, 2026</p>
+            <h1>Privacy Policy & Terms of Service</h1>
+            <p class="update-date">Last updated: January 12, 2026</p>
 
             <div class="section">
                 <h2>I. Privacy Policy</h2>
-                <p>WuJi (hereinafter referred to as "the App") values your privacy. This policy explains how we handle your data.</p>
+                <p>WuJi ("the App") is a minimalist asset management tool. We value your privacy and are committed to ensuring that your data remains under your absolute control.</p>
                 
                 <h3>1. Data Collection & Usage</h3>
-                <p><strong>Local Storage:</strong> Using the SwiftData framework, all item names, prices, quantities, notes, and images you enter are stored locally on your device. We do not upload this data to any third-party servers.</p>
-                <p><strong>iCloud Sync:</strong> The App enables Apple's iCloud service. Your data is synced to your private iCloud database via Apple's encrypted channels. The developer cannot access your iCloud container, nor view or modify your data.</p>
+                <p><strong>No Data Collection:</strong> We do not collect, store, or transmit any personally identifiable information (PII). All user-generated content is stored locally or in your private cloud container.</p>
+                <ul>
+                    <li><strong>Local Storage:</strong> All item names, categories, and notes are stored on your device using Apple's SwiftData. We have no access to this local database.</li>
+                    <li><strong>iCloud Synchronization:</strong> Data is synced via Apple's CloudKit to your private iCloud container. This process is encrypted by Apple, and the developer cannot view your data.</li>
 
+                </ul>
 
-                <h3>2. Permissions</h3>
-                <p><strong>iCloud:</strong> Used to sync your inventory across multiple iOS devices.</p>
+                <h3>2. Log Data</h3>
+                <p>The App does not use any third-party analytics or tracking SDKs. Any crash reports we receive through App Store Connect are anonymized and used strictly for improving App stability.</p>
 
+                <h3>3. Children’s Privacy (Age 4+)</h3>
+                <p>WuJi is rated 4+ on the App Store. Because the App does not require account registration and does not collect any data, it is inherently safe for children. We do not track, request, or share information from any users. All data remains on the device under the user's or guardian's control.</p>
 
-                <h3>3. Third-Party Services</h3>
-                <p>The App contains no third-party advertisement SDKs or data analysis tools. We do not track your behavior.</p>
+                <h3>4. Your Rights</h3>
+                <p>You have full control over your data. You can delete your records at any time by removing items within the App or by deleting the App itself.</p>
             </div>
 
             <div class="section">
                 <h2>II. Terms of Service</h2>
-                <h3>1. Software Usage</h3>
-                <p>WuJi provides a tool for managing physical and digital assets. You own all the data you input.</p>
+                <h3>1. Acceptance of Terms</h3>
+                <p>By using WuJi, you agree to these terms. This App is provided as a personal organization tool for managing your assets.</p>
                 <h3>2. Disclaimer</h3>
-                <p><strong>Data Loss:</strong> While we provide iCloud sync, the App is not liable for data loss caused by system environments or user errors. We recommend regular backups via the "Export" feature.</p>
+                <p>The Service is provided "AS IS". We are not responsible for any data loss resulting from hardware failure or iCloud synchronization issues. We strongly recommend using the "Export" feature to create manual backups periodically.</p>
             </div>
         </div>
 
         <div class="lang-zh" style="display: none;">
-            <h1>隐私政策与用户协议</h1>
-            <p>最近更新日期：2026年1月12日</p>
+            <h1>隐私政策与服务条款</h1>
+            <p class="update-date">最近更新日期：2026年1月12日</p>
 
             <div class="section">
                 <h2>一、隐私政策</h2>
-                <p>物集（以下简称“本应用”）非常重视用户的隐私。本政策旨在说明我们如何处理您的数据。</p>
+                <p>物集（以下简称“本应用”）是一款极简的资产管理工具。我们非常重视您的隐私，并确保您的数据完全由您自己掌控。</p>
                 
                 <h3>1. 数据收集与使用</h3>
-                <p><strong>本地存储：</strong>本应用采用 SwiftData 框架，您录入的所有信息均存储在您的设备本地。我们不会将这些数据上传到任何第三方服务器。</p>
-                <p><strong>iCloud 同步：</strong>您的数据会通过 Apple 的加密通道同步至您个人的 iCloud 私有数据库。开发者无法访问您的数据。</p>
+                <p><strong>不收集个人数据：</strong>我们不会收集、存储或传输任何个人身份信息。您在应用中录入的所有内容均存储在本地或您的私有云空间中。</p>
+                <ul>
+                    <li><strong>本地存储：</strong>所有物品名称、分类和备注均通过 Apple 的 SwiftData 框架存储在您的设备本地。我们无法访问此本地数据库。</li>
+                    <li><strong>iCloud 同步：</strong>数据通过 Apple CloudKit 同步至您的私有 iCloud 容器。该过程由 Apple 加密，开发者无法查看您的数据。</li>
 
+                </ul>
 
-                <h3>2. 权限说明</h3>
-                <p><strong>iCloud 权限：</strong>用于在您的多台 iOS 设备间同步数据。</p>
+                <h3>2. 日志数据</h3>
+                <p>本应用不使用任何第三方分析或追踪 SDK。我们通过 App Store Connect 收到的崩溃报告均为匿名信息，仅用于优化应用稳定性。</p>
 
-                <h3>3. 第三方服务</h3>
-                <p>本应用不包含任何第三方广告或数据分析工具，不会跟踪您的用户行为。</p>
+                <h3>3. 儿童隐私 (分级 4+)</h3>
+                <p>物集在 App Store 的分级为 4 岁以上。由于应用不需要注册账号且不收集任何数据，因此对儿童是天然安全的。我们不会跟踪、请求或共享任何用户数据。所有数据均保留在设备上，由用户或其监护人完全控制。</p>
+
+                <h3>4. 用户权利</h3>
+                <p>您对自己的数据拥有绝对控制权。您可以随时通过删除应用内的记录或直接卸载应用来清除所有数据。</p>
             </div>
 
             <div class="section">
-                <h2>二、用户服务协议</h2>
-                <h3>1. 软件使用</h3>
-                <p>物集为您提供资产管理工具。您拥有对所录入数据的所有权。</p>
+                <h2>二、服务条款</h2>
+                <h3>1. 条款接受</h3>
+                <p>使用物集即表示您同意本条款。本应用作为整理工具供您个人管理资产使用。</p>
                 <h3>2. 免责声明</h3>
-                <p><strong>数据丢失：</strong>因系统环境或用户操作不当导致的数据丢失，本应用不承担赔偿责任。建议您定期导出数据进行备份。</p>
+                <p>本服务按“原样”提供。对于因硬件故障或 iCloud 同步问题导致的数据丢失，开发者不承担赔偿责任。建议您定期使用“导出”功能进行手动备份。</p>
             </div>
         </div>
     </div>

@@ -1,54 +1,60 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy - WuJi 物集</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物集 (WuJI) - 隐私政策与用户协议</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; padding: 40px; max-width: 800px; margin: 0 auto; color: #1c1c1e; }
-        .section { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
-        h1 { font-size: 24px; } h2 { font-size: 18px; color: #FF6B00; }
-        .lang-switch { text-align: right; margin-bottom: 20px; }
-        .lang-btn { cursor: pointer; color: #007AFF; border: none; background: none; font-size: 14px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; color: #000; }
+        h2 { margin-top: 30px; color: #444; border-left: 4px solid #007AFF; padding-left: 10px; }
+        p { margin: 10px 0; }
+        .footer { margin-top: 50px; font-size: 0.9em; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+        .section { margin-bottom: 40px; }
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <button onclick="document.getElementById('zh').style.display='block'; document.getElementById('en').style.display='none';" class="lang-btn">中文</button> | 
-        <button onclick="document.getElementById('zh').style.display='none'; document.getElementById('en').style.display='block';" class="lang-btn">English</button>
+
+    <h1>物集 (WuJI) 隐私政策与用户协议</h1>
+    <p>最近更新日期：2026年1月12日</p>
+
+    <div class="section">
+        <h2>一、隐私政策</h2>
+        <p>物集（以下简称“本应用”）非常重视用户的隐私。本政策旨在说明我们如何处理您的数据。</p>
+        
+        <h3>1. 数据收集与使用</h3>
+        <p><strong>本地存储：</strong>本应用采用 SwiftData 框架，您录入的所有物品名称、价格、数量、备注及图片等信息均存储在您的设备本地。我们不会将这些数据上传到任何第三方服务器。</p>
+        <p><strong>iCloud 同步：</strong>本应用启用了 Apple iCloud 云存储服务。您的数据会通过 Apple 的加密通道同步至您个人的 iCloud 私有数据库。开发者无法访问您的 iCloud 容器，也无法查看、修改或泄露您的数据。</p>
+
+        <h3>2. 权限说明</h3>
+        <p><strong>照片库访问：</strong>仅用于您主动选择物品图片或进行 OCR 识别。我们不会在未经授权的情况下访问您的相册。</p>
+        <p><strong>iCloud 权限：</strong>用于在您的多台 iOS 设备间同步物品清单。</p>
+
+        <h3>3. 数据安全</h3>
+        <p>由于数据存储在您的设备和个人 iCloud 中，数据的安全性由 iOS 系统及 Apple 的安全机制保障。建议您妥善保管您的 Apple ID 账号信息。</p>
+
+        <h3>4. 第三方服务</h3>
+        <p>本应用不包含任何第三方广告 SDK 或数据分析工具，不会跟踪您的用户行为。</p>
     </div>
 
-    <div id="zh">
-        <h1>隐私政策</h1>
-        <p>更新日期：2026年1月11日</p>
-        <div class="section">
-            <h2>1. 数据收集与存储</h2>
-            <p>「物集」坚持隐私至上原则。您录入的所有物品名称、价格及照片均存储在您的设备本地。我们不设立中心服务器，不要求注册账户，因此无法访问您的个人数据。</p>
-        </div>
-        <div class="section">
-            <h2>2. iCloud 同步</h2>
-            <p>App 使用 Apple 的 CloudKit 技术进行同步。数据仅在您个人的私有 iCloud 容器中传输和存储，开发者和其他第三方均无权访问。</p>
-        </div>
-        <div class="section">
-            <h2>3. 第三方 SDK</h2>
-            <p>本 App 不集成任何第三方广告或追踪 SDK。所有代码均为原生开发，确保数据环境纯净。</p>
-        </div>
+    <div class="section">
+        <h2>二、用户服务协议</h2>
+        <h3>1. 软件使用</h3>
+        <p>物集为您提供个人物品清单管理工具。您拥有对所录入数据的所有权。本应用仅供个人使用，不得用于任何非法用途。</p>
+
+        <h3>2. 免责声明</h3>
+        <p><strong>数据丢失：</strong>虽然我们尽力通过 iCloud 提供同步功能，但由于系统环境、网络状况或用户操作不当导致的数据丢失，本应用不承担赔偿责任。建议您定期通过应用的“导出”功能备份重要数据。</p>
+        <p><strong>OCR 准确性：</strong>OCR 识别结果受图片质量影响，本应用不保证识别结果的 100% 准确性，请在保存前自行核对数据。</p>
+
+        <h3>3. 协议修改</h3>
+        <p>我们可能会不时更新本协议。更新后的协议一旦在应用内或官网发布即生效。</p>
     </div>
 
-    <div id="en" style="display:none;">
-        <h1>Privacy Policy</h1>
-        <p>Last Updated: Jan 11, 2026</p>
-        <div class="section">
-            <h2>1. Data Collection & Storage</h2>
-            <p>WuJi adheres to a privacy-first principle. All item names, prices, and photos you enter are stored locally on your device. We do not use central servers or require accounts, so we have no access to your data.</p>
-        </div>
-        <div class="section">
-            <h2>2. iCloud Synchronization</h2>
-            <p>The app uses Apple's CloudKit technology for syncing. Data is transmitted and stored only within your private iCloud container, inaccessible to the developer or any third party.</p>
-        </div>
-        <div class="section">
-            <h2>3. Third-party SDKs</h2>
-            <p>This app does not integrate any third-party advertising or tracking SDKs. All code is natively developed to ensure a clean data environment.</p>
-        </div>
+    <div class="footer">
+        <p>如果您有任何疑问，请联系开发者：<br>
+        <strong>laplace@wuji321.com</strong></p>
+        <p>&copy; 2026 Laplace. All Rights Reserved.</p>
     </div>
+
 </body>
 </html>

@@ -3,57 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>物集 (WuJI) - 隐私政策与用户协议</title>
+    <title>WuJi - Privacy Policy & Terms of Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; color: #000; }
-        h2 { margin-top: 30px; color: #444; border-left: 4px solid #007AFF; padding-left: 10px; }
-        p { margin: 10px 0; }
-        .footer { margin-top: 50px; font-size: 0.9em; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
-        .section { margin-bottom: 40px; }
+        .content-body { line-height: 1.8; color: #333; max-width: 850px; margin: 100px auto 50px; padding: 20px; }
+        h1 { border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; color: #000; font-size: 2.2rem; }
+        h2 { margin-top: 40px; color: #1a1a1a; border-left: 4px solid #000; padding-left: 15px; font-size: 1.5rem; }
+        h3 { margin-top: 25px; color: #444; }
+        p { margin: 15px 0; color: #666; }
+        strong { color: #000; }
+        .section { margin-bottom: 50px; }
     </style>
 </head>
 <body>
 
-    <h1>物集 (WuJI) 隐私政策与用户协议</h1>
-    <p>最近更新日期：2026年1月12日</p>
+    <nav class="navbar">
+        <a href="index.html" class="logo">WuJi <span class="logo-cn">物集</span></a>
+        <button id="lang-toggle" class="lang-btn">
+            <span class="lang-en">中文</span>
+            <span class="lang-zh" style="display: none;">English</span>
+        </button>
+    </nav>
 
-    <div class="section">
-        <h2>一、隐私政策</h2>
-        <p>物集（以下简称“本应用”）非常重视用户的隐私。本政策旨在说明我们如何处理您的数据。</p>
-        
-        <h3>1. 数据收集与使用</h3>
-        <p><strong>本地存储：</strong>本应用采用 SwiftData 框架，您录入的所有物品名称、价格、数量、备注及图片等信息均存储在您的设备本地。我们不会将这些数据上传到任何第三方服务器。</p>
-        <p><strong>iCloud 同步：</strong>本应用启用了 Apple iCloud 云存储服务。您的数据会通过 Apple 的加密通道同步至您个人的 iCloud 私有数据库。开发者无法访问您的 iCloud 容器，也无法查看、修改或泄露您的数据。</p>
+    <div class="content-body">
+        <div class="lang-en">
+            <h1>Privacy Policy & Terms</h1>
+            <p>Last updated: January 12, 2026</p>
 
-        <h3>2. 权限说明</h3>
-        <p><strong>iCloud 权限：</strong>用于在您的多台 iOS 设备间同步物品清单。</p>
+            <div class="section">
+                <h2>I. Privacy Policy</h2>
+                <p>WuJi (hereinafter referred to as "the App") values your privacy. This policy explains how we handle your data.</p>
+                
+                <h3>1. Data Collection & Usage</h3>
+                <p><strong>Local Storage:</strong> Using the SwiftData framework, all item names, prices, quantities, notes, and images you enter are stored locally on your device. We do not upload this data to any third-party servers.</p>
+                <p><strong>iCloud Sync:</strong> The App enables Apple's iCloud service. Your data is synced to your private iCloud database via Apple's encrypted channels. The developer cannot access your iCloud container, nor view or modify your data.</p>
 
-        <h3>3. 数据安全</h3>
-        <p>由于数据存储在您的设备和个人 iCloud 中，数据的安全性由 iOS 系统及 Apple 的安全机制保障。建议您妥善保管您的 Apple ID 账号信息。</p>
 
-        <h3>4. 第三方服务</h3>
-        <p>本应用不包含任何第三方广告 SDK 或数据分析工具，不会跟踪您的用户行为。</p>
+                <h3>2. Permissions</h3>
+                <p><strong>iCloud:</strong> Used to sync your inventory across multiple iOS devices.</p>
+
+
+                <h3>3. Third-Party Services</h3>
+                <p>The App contains no third-party advertisement SDKs or data analysis tools. We do not track your behavior.</p>
+            </div>
+
+            <div class="section">
+                <h2>II. Terms of Service</h2>
+                <h3>1. Software Usage</h3>
+                <p>WuJi provides a tool for managing physical and digital assets. You own all the data you input.</p>
+                <h3>2. Disclaimer</h3>
+                <p><strong>Data Loss:</strong> While we provide iCloud sync, the App is not liable for data loss caused by system environments or user errors. We recommend regular backups via the "Export" feature.</p>
+            </div>
+        </div>
+
+        <div class="lang-zh" style="display: none;">
+            <h1>隐私政策与用户协议</h1>
+            <p>最近更新日期：2026年1月12日</p>
+
+            <div class="section">
+                <h2>一、隐私政策</h2>
+                <p>物集（以下简称“本应用”）非常重视用户的隐私。本政策旨在说明我们如何处理您的数据。</p>
+                
+                <h3>1. 数据收集与使用</h3>
+                <p><strong>本地存储：</strong>本应用采用 SwiftData 框架，您录入的所有信息均存储在您的设备本地。我们不会将这些数据上传到任何第三方服务器。</p>
+                <p><strong>iCloud 同步：</strong>您的数据会通过 Apple 的加密通道同步至您个人的 iCloud 私有数据库。开发者无法访问您的数据。</p>
+
+
+                <h3>2. 权限说明</h3>
+                <p><strong>iCloud 权限：</strong>用于在您的多台 iOS 设备间同步数据。</p>
+
+                <h3>3. 第三方服务</h3>
+                <p>本应用不包含任何第三方广告或数据分析工具，不会跟踪您的用户行为。</p>
+            </div>
+
+            <div class="section">
+                <h2>二、用户服务协议</h2>
+                <h3>1. 软件使用</h3>
+                <p>物集为您提供资产管理工具。您拥有对所录入数据的所有权。</p>
+                <h3>2. 免责声明</h3>
+                <p><strong>数据丢失：</strong>因系统环境或用户操作不当导致的数据丢失，本应用不承担赔偿责任。建议您定期导出数据进行备份。</p>
+            </div>
+        </div>
     </div>
 
-    <div class="section">
-        <h2>二、用户服务协议</h2>
-        <h3>1. 软件使用</h3>
-        <p>物集为您提供个人物品清单管理工具。您拥有对所录入数据的所有权。本应用仅供个人使用，不得用于任何非法用途。</p>
+    <footer>
+        <div class="container">
+            <div class="lang-en">
+                <p>© 2026 WuJi App. Laplace TONG. All Rights Reserved.</p>
+                <p>Contact: <strong>laplace@wuji321.com</strong></p>
+            </div>
+            <div class="lang-zh" style="display: none;">
+                <p>© 2026 物集 App. Laplace TONG. 保留所有权利。</p>
+                <p>联系邮箱：<strong>laplace@wuji321.com</strong></p>
+            </div>
+        </div>
+    </footer>
 
-        <h3>2. 免责声明</h3>
-        <p><strong>数据丢失：</strong>虽然我们尽力通过 iCloud 提供同步功能，但由于系统环境、网络状况或用户操作不当导致的数据丢失，本应用不承担赔偿责任。建议您定期通过应用的“导出”功能备份重要数据。</p>
-        <p><strong>OCR 准确性：</strong>OCR 识别结果受图片质量影响，本应用不保证识别结果的 100% 准确性，请在保存前自行核对数据。</p>
-
-        <h3>3. 协议修改</h3>
-        <p>我们可能会不时更新本协议。更新后的协议一旦在应用内或官网发布即生效。</p>
-    </div>
-
-    <div class="footer">
-        <p>如果您有任何疑问，请联系开发者：<br>
-        <strong>laplace@wuji321.com</strong></p>
-        <p>&copy; 2026 Laplace. All Rights Reserved.</p>
-    </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
